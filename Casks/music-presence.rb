@@ -7,9 +7,10 @@ cask "music-presence" do
   sha256 arm: "b7b9fbd8db72edfa24ea9aa24e00dff1e6d289d09c3e5914fb8bfff4da6cf982",
          intel: "6e119c862c3c8b5aa7cd466f6f5e524b1614ca427fdca201e08cae998d30d048"
 
+  repo = "github.com/ungive/discord-music-presence"
   arch arm: "arm64", intel: "x86_64"
-  url "https://github.com/ungive/discord-music-presence/releases/download/v#{version}/musicpresence-#{version}-mac-#{arch}.dmg",
-    verified: "github.com/ungive/discord-music-presence"
+  url "https://#{repo}/releases/download/v#{version}/musicpresence-#{version}-mac-#{arch}.dmg",
+    verified: "#{repo}"
 
   name "Music Presence"
   desc "The Discord music status that works with any media player"
@@ -24,6 +25,10 @@ cask "music-presence" do
         "~/Library/Application Support/Music Presence",
         "~/Library/Preferences/app.musicpresence.desktop.plist",
       ]
+
+  caveats do
+    license "https://#{repo}/blob/v#{version}/LICENSE.md"
+  end
 
   livecheck do
     url :url
