@@ -1,18 +1,16 @@
-# Ungive Music-presence
+# ungive/music-presence
 
-## How do I install these formulae?
+## How do I install this cask?
 
-`brew install ungive/music-presence/<formula>`
-
-Or `brew tap ungive/music-presence` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "ungive/music-presence"
-brew "<formula>"
+```
+brew tap ungive/music-presence
+brew install music-presence
 ```
 
-## Documentation
+## How do I maintain this cask?
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+Update to the latest version: `$ python3 ./scripts/update.py`
+
+Fix brew style `$ brew style --fix ./Casks/music-presence.rb`
+
+Push, then check the output of the GitHub runner for any errors.
