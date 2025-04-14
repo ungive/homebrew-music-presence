@@ -7,7 +7,7 @@ cask "music-presence" do
 
   version "2.3.0"
   repo = "github.com/ungive/discord-music-presence"
-  sha256 arm: "b7b9fbd8db72edfa24ea9aa24e00dff1e6d289d09c3e5914fb8bfff4da6cf982",
+  sha256 arm:   "b7b9fbd8db72edfa24ea9aa24e00dff1e6d289d09c3e5914fb8bfff4da6cf982",
          intel: "6e119c862c3c8b5aa7cd466f6f5e524b1614ca427fdca201e08cae998d30d048"
 
   url "https://#{repo}/releases/download/v#{version}/musicpresence-#{version}-mac-#{arch}.dmg",
