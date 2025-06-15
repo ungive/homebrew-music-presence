@@ -1,5 +1,3 @@
-#!/bin/bash
-
 import fileinput
 import json
 import re
