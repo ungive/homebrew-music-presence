@@ -5,10 +5,10 @@
 cask "music-presence" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.3.0"
+  version "2.3.1"
   repo = "github.com/ungive/discord-music-presence"
-  sha256 arm:   "b7b9fbd8db72edfa24ea9aa24e00dff1e6d289d09c3e5914fb8bfff4da6cf982",
-         intel: "6e119c862c3c8b5aa7cd466f6f5e524b1614ca427fdca201e08cae998d30d048"
+  sha256 arm:   "8d4ee30b1b32f48a2642b6dad9e68e249e8e6ea80509d772f851cb013bfa26d5",
+         intel: "0514627a3fa76f4467f809a9c89fd31c6125bf14380011e2380a1363c59c13d3"
 
   url "https://#{repo}/releases/download/v#{version}/musicpresence-#{version}-mac-#{arch}.dmg",
       verified: repo.to_s
@@ -31,13 +31,6 @@ cask "music-presence" do
   depends_on arch: [:arm64, :x86_64]
 
   app "Music Presence.app"
-
-  # FIXME: remove this once the app is notarized
-  postflight do
-    system_command "xattr",
-                   args: ["-cr", "/Applications/Music Presence.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Application Support/Music Presence",
