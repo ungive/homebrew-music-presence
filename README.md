@@ -1,5 +1,9 @@
 # ungive/music-presence
 
+> [!WARNING]
+> Use `brew install music-presence` to install Music Presence via brew.  
+> This repository is not kept up-to-date anymore.
+
 ## How do I install this cask?
 
 ```
@@ -12,5 +16,3 @@ brew install music-presence
 Update to the latest version: `$ python3 ./scripts/update.py`
 
 Fix brew style `$ brew style --fix ./Casks/music-presence.rb`
-
-Push, then check the output of the GitHub runner for any errors.
